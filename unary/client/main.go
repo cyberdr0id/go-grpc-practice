@@ -3,14 +3,15 @@ package main
 import (
 	"fmt"
 	"log"
+	"os"
 
 	"github.com/cyberdr0id/go-grpc-practice/unary/proto"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )
 
-const (
-	address = "localhost:7777"
+var (
+	address = "localhost:" + os.Args[1]
 )
 
 func main() {
