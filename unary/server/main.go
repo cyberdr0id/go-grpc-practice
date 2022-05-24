@@ -5,6 +5,7 @@ import (
 	"net"
 	"os"
 
+
 	"github.com/cyberdr0id/go-grpc-practice/unary/proto"
 	"google.golang.org/grpc"
 )
@@ -12,6 +13,7 @@ import (
 type Server struct {
 	proto.UnaryServiceServer
 }
+
 
 var (
 	address = "0.0.0.0:" + os.Args[1]
