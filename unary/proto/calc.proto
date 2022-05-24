@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package unary;
+
+option go_package = "github.com/cyberdr0id/go-grpc-practice/unary/proto";
+
+service UnaryService {
+    rpc Sum(UnaryRequest) returns (UnaryResponse);
+}
+
+message UnaryRequest {
+    int32 x = 1;
+    int32 y = 2;
+}
+
+message UnaryResponse {
+    int32 result = 1;
+}
