@@ -11,11 +11,13 @@ make <communication_type>
 
 This command will genereate Go code from `.proto` file and `bin` folder will be created with folder `<communication_type>` inside, which will contain two binary files `client.exe` and `server.exe`.
 
+# unary
+
 To start application you must run `server.exe` file with port number in command line arguments:
 ```
 ./bin/<communication_type>/server <port_number>
 ```
-And after run `client.exe` with the same port number.  
+And after run `client.exe` with the same port number and two additional integer parameters.
 ```
-./bin/<communication_type>/client <port_number>
+./bin/<communication_type>/client <port_number> <int1> <int2>
 ```
