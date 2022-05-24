@@ -3,6 +3,8 @@ package main
 import (
 	"log"
 	"net"
+	"os"
+
 
 	"github.com/cyberdr0id/go-grpc-practice/unary/proto"
 	"google.golang.org/grpc"
@@ -12,8 +14,9 @@ type Server struct {
 	proto.UnaryServiceServer
 }
 
-const (
-	address = "0.0.0.0:7777"
+
+var (
+	address = "0.0.0.0:" + os.Args[1]
 	network = "tcp"
 )
 
