@@ -1,9 +1,9 @@
 # Project presents implementation of different gRPC communications.
 
 ### Makefile uses for **Windows**  OS
-Make sure that [GNU Make](https://www.gnu.org/software/make/) is installed, otherwise follow the commands in the appropriate group
 
-First of all you should build project
+First of all you should build project.  
+> Make sure that [GNU Make](https://www.gnu.org/software/make/) is installed, otherwise follow the commands in the appropriate group
 ```
 make <communication_type>
 ```
