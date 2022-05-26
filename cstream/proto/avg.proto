@@ -1,0 +1,17 @@
+syntax="proto3";
+
+package cstream;
+
+option go_package = "github.com/cyberdr0id/go-grpc-practice/cstream/proto";
+
+message AvgRequest {
+    int32 input = 1;
+}
+
+message AvgResponse {
+    double result = 1;
+}
+
+service AvgService {
+    rpc Avg(stream AvgRequest) returns (AvgResponse);
+}
