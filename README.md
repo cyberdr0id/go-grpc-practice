@@ -24,7 +24,7 @@ To start application you must run `server.exe` file with port number in command 
 ```
 ./bin/<communication_type>/server <port_number>
 ```
-And after run `client.exe` with the same port number and two additional integer parameters.
+And then run `client.exe` with the same port number and two additional integer parameters.
 ```
 ./bin/<communication_type>/client <port_number> <int1> <int2>
 ```  
@@ -42,7 +42,7 @@ To start application you must run `server.exe` file with port number in command 
 ```
 ./bin/<communication_type>/server <port_number>
 ```
-And after run `client.exe` with the same port number and one additional integer parameter
+And then run `client.exe` with the same port number and one additional integer parameter
 ```
 ./bin/<communication_type>/client <port_number> <int1>
 ```  
@@ -60,7 +60,7 @@ To start application you must run `server.exe` file with port number in command 
 ```
 ./bin/<communication_type>/server <port_number>
 ```
-And after run `client.exe` with the same port number and one additional integers parameter
+And then run `client.exe` with the same port number and additional integer parameters
 ```
 ./bin/<communication_type>/client <port_number> <int1> <int2> ... <int n>
 ```  
