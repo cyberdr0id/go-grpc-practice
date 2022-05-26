@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"os"
 	"strconv"
@@ -43,5 +42,5 @@ func main() {
 		log.Fatalf("Cannot find sum: %v\n", err)
 	}
 
-	fmt.Println("Result ", res)
+	log.Println("Result ", res)
 }
