@@ -46,3 +46,21 @@ And after run `client.exe` with the same port number and one additional integer 
 ```
 ./bin/<communication_type>/client <port_number> <int1>
 ```  
+
+# cstream
+### Example of **client streaming** API with server and client implementation. In this example, the server will calculate average of the numbers, that will be sent by the client.
+---
+```
+protoc -Icstream/proto --go_opt=module=github.com/cyberdr0id/go-grpc-practice --go_out=. --go-grpc_opt=module=github.com/cyberdr0id/go-grpc-practice --go-grpc_out=. cstream/proto/*.proto
+
+go build -o bin/cstream/client.exe ./cstream/client
+go build -o bin/cstream/server.exe ./cstream/server
+```
+To start application you must run `server.exe` file with port number in command line arguments:
+```
+./bin/<communication_type>/server <port_number>
+```
+And after run `client.exe` with the same port number and one additional integers parameter
+```
+./bin/<communication_type>/client <port_number> <int1> <int2> ... <int n>
+```  
