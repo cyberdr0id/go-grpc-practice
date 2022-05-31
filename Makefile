@@ -7,15 +7,17 @@ PROTO_DIR = proto
 SERVER_DIR = server
 CLIENT_DIR = client
 
-.PHONY: unary sstream cstream
+.PHONY: unary sstream cstream bistream
 
-project := unary sstream cstream
+project := unary sstream cstream bistream
 
 all: $(project)
 
 unary: $@
 sstream: $@
 cstream: $@
+bistream: $@
+
 
 $(project):
 	protoc -I$@/${PROTO_DIR} --go_opt=module=${PACKAGE} --go_out=. --go-grpc_opt=module=${PACKAGE} --go-grpc_out=. $@/${PROTO_DIR}/*.proto

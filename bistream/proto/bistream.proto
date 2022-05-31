@@ -1,0 +1,17 @@
+syntax="proto3";
+
+package bistream;
+
+option go_package = "github.com/cyberdr0id/go-grpc-practice/bistream/proto";
+
+message MaxRequest {
+    int32 input = 1;
+}
+
+message MaxResponse {
+    int32 result = 1;
+}
+
+service MaxService {
+    rpc Max(stream MaxRequest) returns (stream MaxResponse);
+}
