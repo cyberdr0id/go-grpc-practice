@@ -64,3 +64,20 @@ And then run `client.exe` with the same port number and additional integer param
 ```
 ./bin/<communication_type>/client <port_number> <int1> <int2> ... <int n>
 ```  
+# bistream
+### Example of *bi-directional streaming* API with server and client implementation. In this example, the server will current max value of the numbers, that will be sent by the client.
+---
+```
+protoc -Ibistream/proto --go_opt=module=github.com/cyberdr0id/go-grpc-practice --go_out=. --go-grpc_opt=module=github.com/cyberdr0id/go-grpc-practice --go-grpc_out=. bistream/proto/*.proto
+
+go build -o bin/bistream/client.exe ./bistream/client
+go build -o bin/bistream/server.exe ./bistream/server
+```
+To start application you must run `server.exe` file with port number in command line arguments:
+```
+./bin/<communication_type>/server <port_number>
+```
+And then run `client.exe` with the same port number and additional integer parameters
+```
+./bin/<communication_type>/client <port_number> <int1> <int2> ... <int n>
+```  
